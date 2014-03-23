@@ -10,9 +10,20 @@ var mozillaData = {
               console.log("success");
               interactionCount = $(e).find('meta[itemprop=interactionCount]').first()[0].content;
               console.log(interactionCount);
-              $('#outputDiv')
-                  .append('<li>' + interactionCount + '</li>')
-                  .listview('refresh');
+              var classesToAdd = $('#outputDiv li').first().class;
+              var itemToAdd = $('<li>' +
+                  '<span style="float:left;">' +
+                  addonName +
+                  ' :</span>' +
+                  '<span style="float:right;">' +
+                  interactionCount +
+                  '</span>' +
+                  '</li>');
+              itemToAdd
+                  .hide()
+                  .prependTo('#outputDiv');
+              $('#outputDiv').listview('refresh');
+              itemToAdd.slideDown('slow');
           })
           .fail(function (e) {
               console.log("error");
