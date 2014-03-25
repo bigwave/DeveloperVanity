@@ -27,7 +27,7 @@ var app = {
     // `load`, `deviceready`, `offline`, and `online`.
     bindEvents: function () {
 
-        alert('bound deviceready')
+        console.log('bound deviceready')
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
     // deviceready Event Handler
@@ -36,7 +36,7 @@ var app = {
     // function, we must explicity call `app.receivedEvent(...);`
     onDeviceReady: function () {
         dd.resolve();
-        alert('bound onDeviceReady')
+        console.log('bound onDeviceReady')
 
         app.receivedEvent('deviceready');
     },
@@ -49,6 +49,6 @@ var app = {
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
 
-        alert('Received Event: ' + id);
+        console.log('Received Event: ' + id);
     },
 };

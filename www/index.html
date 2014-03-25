@@ -41,7 +41,7 @@
     <script src="scripts/jquery-2.1.0.js"></script>
     <script type="text/javascript">
         function doInit() {
-            alert('Cordova and Mobile Jquery are both ready');
+            console.log('Cordova and Mobile Jquery are both ready');
             mozillaData.getAddonData('RemoteLiveReload');
             mozillaData.getAddonData('ToggleFullHeaders');
         };
@@ -49,7 +49,7 @@
         var jqd = $.Deferred();
         $.when(dd, jqd).done(doInit);
         $(document).bind('mobileinit', function () {
-            alert('mobileinit');
+            console.log('mobileinit');
             $.mobile.support.cors = true;
             $.mobile.allowCrossDomainPages = true;
             jqd.resolve();
@@ -76,9 +76,9 @@
         <script type="text/javascript" src="js/mozilla.js"></script>
         <script type="text/javascript">
             app.initialize();
-            alert('app.initialise');
+            console.log('app.initialise');
             if (window.location.href.indexOf('testytesttest') != -1) {
-                alert('I am testing');
+                console.log('I am testing');
                 app.onDeviceReady();
             };
         </script>
