@@ -20,17 +20,19 @@
 <html>
 <head>
     <script type="text/javascript">
-        if (window.external.Notify) {
-            window.console = {
-                log: function (str) { window.external.Notify(str); }
-            };
+        if (window.external) {
+            if (window.external.Notify) {
+                window.console = {
+                    log: function (str) { window.external.Notify(str); }
+                };
 
-            // output errors to console log
-            window.onerror = function (e) {
-                console.log("window.onerror ::" + JSON.stringify(e));
-            };
+                // output errors to console log
+                window.onerror = function (e) {
+                    console.log("window.onerror ::" + JSON.stringify(e));
+                };
 
-            console.log("Installed console !");
+                console.log("Installed console !");
+            }
         }
     </script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
