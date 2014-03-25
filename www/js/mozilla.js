@@ -1,22 +1,46 @@
 /// <reference path="../Scripts/jquery-2.1.0.js" />
 var mozillaData = {
     getAddonData: function getMozillaData(addonName) {
-        var urlToCall = 'https://addons.mozilla.org/addon/' +
-        addonName +
-        '/statistics/overview-day-20140222-20140322.json';
-        urlToCall = 'https://addons.mozilla.org/en-US/firefox/addon/remotelivereload/';
-        var jqxhr = $.ajax(urlToCall)
+        var urlToCall = 'https://addons.mozilla.org/addon/' + addonName;
+
+        var jqxhr = $.ajax({
+            url: urlToCall
+        })
           .done(function (e) {
               console.log("success");
-              interactionCount = $(e).find('meta[itemprop=interactionCount]').first()[0].content;
-              console.log(interactionCount);
+              //console.log(e);
+              //<tr class="adu">
+              //  <th>Users</th>
+              //  <td>38</td>
+              //</tr>
+              //<tr class="downloads">
+              //  <th>Weekly Downloads</th>
+              //  <td>18</td>
+              //</tr>
+              aduHeader = $(e).find('tr[class="adu"] th')[0].innerText;
+              aduValue = $(e).find('tr[class="adu"] td')[0].innerText;
+              downloadsHeader = $(e).find('tr[class="downloads"] th')[0].innerText;
+              downloadsValue = $(e).find('tr[class="downloads"] td')[0].innerText;
+              console.log(addonName + ' ' + aduHeader + ' ' + aduValue);
+              console.log(addonName + ' ' + downloadsHeader + ' ' + downloadsValue);
               var classesToAdd = $('#outputDiv li').first().class;
               var itemToAdd = $('<li>' +
-                  '<span style="float:left;">' +
+                  '<span><strong>' +
                   addonName +
+                  '</strong></span>' +
+                  '<br/>' +
+                  '<span style="float:left;">' +
+                  aduHeader +
                   ' :</span>' +
                   '<span style="float:right;">' +
-                  interactionCount +
+                  aduValue +
+                  '</span>' +
+                  '<br/>' +
+                  '<span style="float:left;">' +
+                  downloadsHeader +
+                  ' :</span>' +
+                  '<span style="float:right;">' +
+                  downloadsValue +
                   '</span>' +
                   '</li>');
               itemToAdd
