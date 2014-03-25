@@ -2,7 +2,7 @@
 var mozillaData = {
     getAddonData: function getMozillaData(addonName) {
         var urlToCall = 'https://addons.mozilla.org/addon/' + addonName;
-
+        alert('get data ' + addon);
         var jqxhr = $.ajax({
             url: urlToCall
         })

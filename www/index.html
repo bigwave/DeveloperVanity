@@ -40,16 +40,8 @@
     <link rel="stylesheet" href="content/jquery.mobile-1.4.0.css" />
     <script src="scripts/jquery-2.1.0.js"></script>
     <script type="text/javascript">
-        function debugStuff(text) {
-            var divToUpdate = document.getElementById('debugStuff');
-            if (divToUpdate) {
-                var theText = divToUpdate.innerHTML;
-                theText = text + '<br/>' + theText;
-                divToUpdate.innerHTML = theText;
-            }
-        }
         function doInit() {
-            debugStuff('Cordova and Mobile Jquery are both ready');
+            alert('Cordova and Mobile Jquery are both ready');
             mozillaData.getAddonData('RemoteLiveReload');
             mozillaData.getAddonData('ToggleFullHeaders');
         };
@@ -57,7 +49,7 @@
         var jqd = $.Deferred();
         $.when(dd, jqd).done(doInit);
         $(document).bind('mobileinit', function () {
-            debugStuff('mobileinit');
+            alert('mobileinit');
             $.mobile.support.cors = true;
             $.mobile.allowCrossDomainPages = true;
             jqd.resolve();
@@ -84,9 +76,9 @@
         <script type="text/javascript" src="js/mozilla.js"></script>
         <script type="text/javascript">
             app.initialize();
-            debugStuff('app.initialise');
+            alert('app.initialise');
             if (window.location.href.indexOf('testytesttest') != -1) {
-                console.log('I am testing');
+                alert('I am testing');
                 app.onDeviceReady();
             };
         </script>
