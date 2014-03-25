@@ -163,6 +163,7 @@
   <ItemGroup>
     <Content Include="config.xml" />
     <Content Include="www\cordova_plugins.js" />
+    <Content Include="www\jquery-2.1.0.js" />
     <Content Include="www\js\mozilla.js" />
     <Content Include="www\Scripts\jquery-2.1.0.intellisense.js" />
     <Content Include="www\Scripts\jquery-2.1.0.js" />
