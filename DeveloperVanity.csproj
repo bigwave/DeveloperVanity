@@ -162,7 +162,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="config.xml" />
-    <Content Include="www\cordova_plugins.js" />
     <Content Include="www\jquery-2.1.0.js" />
     <Content Include="www\jquery.mobile-1.4.0.js" />
     <Content Include="www\mozilla.js" />
@@ -395,7 +394,7 @@
     <Content Include="www\jquery.mobile.theme-1.4.0.min.css" />
     <Content Include="www\cordova.js" />
     <Content Include="www\index.html" />
-    <Content Include="www\index.css" />
+    <Content Include="www\css\index.css" />
     <Content Include="www\index.js" />
     <Content Include="www\img\logo.png" />
     <Content Include="Images\appbar.back.rest.png" />
@@ -445,7 +444,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="www\Content\" />
-    <Folder Include="www\css\" />
     <Folder Include="www\js\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
