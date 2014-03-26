@@ -163,14 +163,14 @@
   <ItemGroup>
     <Content Include="config.xml" />
     <Content Include="www\config.xml" />
-    <Content Include="www\js\mozilla.js" />
-    <Content Include="www\js\Scripts\jquery-2.1.0.intellisense.js" />
+    <Content Include="www\mozilla.js" />
+    <Content Include="www\Scripts\jquery-2.1.0.intellisense.js" />
     <Content Include="www\jquery-2.1.0.js" />
-    <Content Include="www\js\Scripts\jquery-2.1.0.min.js" />
+    <Content Include="www\Scripts\jquery-2.1.0.min.js" />
     <Content Include="www\jquery.mobile-1.4.0.js" />
-    <Content Include="www\js\Scripts\jquery.mobile-1.4.0.min.js" />
-    <None Include="www\js\Scripts\jquery-2.1.0.min.map" />
-    <None Include="www\js\Scripts\jquery.mobile-1.4.0.min.map" />
+    <Content Include="www\Scripts\jquery.mobile-1.4.0.min.js" />
+    <None Include="www\Scripts\jquery-2.1.0.min.map" />
+    <None Include="www\Scripts\jquery.mobile-1.4.0.min.map" />
     <Resource Include="www\images\ajax-loader.gif" />
     <Content Include="www\images\ajax-loader.png" />
     <Content Include="www\images\icons-18-black.png" />
@@ -391,10 +391,10 @@
     <Content Include="www\css\jquery.mobile.structure-1.4.0.min.css" />
     <Content Include="www\css\jquery.mobile.theme-1.4.0.css" />
     <Content Include="www\css\jquery.mobile.theme-1.4.0.min.css" />
-    <Content Include="www\js\cordova.js" />
+    <Content Include="www\cordova.js" />
     <Content Include="www\index.html" />
     <Content Include="www\css\index.css" />
-    <Content Include="www\js\index.js" />
+    <Content Include="www\index.js" />
     <Content Include="www\img\logo.png" />
     <Content Include="Images\appbar.back.rest.png" />
     <Content Include="Images\appbar.close.rest.png" />
@@ -443,6 +443,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="www\Content\" />
+    <Folder Include="www\js\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
