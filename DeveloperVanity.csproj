@@ -166,9 +166,9 @@
     <Content Include="www\css\jquery.mobile-1.4.0.js" />
     <Content Include="www\js\mozilla.js" />
     <Content Include="www\Scripts\jquery-2.1.0.intellisense.js" />
-    <Content Include="www\Scripts\jquery-2.1.0.js" />
+    <Content Include="www\js\jquery-2.1.0.js" />
     <Content Include="www\Scripts\jquery-2.1.0.min.js" />
-    <Content Include="www\Scripts\jquery.mobile-1.4.0.js" />
+    <Content Include="www\js\jquery.mobile-1.4.0.js" />
     <Content Include="www\Scripts\jquery.mobile-1.4.0.min.js" />
     <None Include="www\Scripts\jquery-2.1.0.min.map" />
     <None Include="www\Scripts\jquery.mobile-1.4.0.min.map" />
