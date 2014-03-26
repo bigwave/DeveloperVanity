@@ -162,6 +162,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="config.xml" />
+    <Content Include="www\config.xml" />
     <Content Include="www\css\jquery.mobile-1.4.0.js" />
     <Content Include="www\js\mozilla.js" />
     <Content Include="www\Scripts\jquery-2.1.0.intellisense.js" />
